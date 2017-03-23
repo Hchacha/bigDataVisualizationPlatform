@@ -12,7 +12,7 @@
 					<h4 class="pic_title">{{imgM.name}}</h4>
 					<p>{{imgM.des}}</p>
 				</div>
-				<button class="btn">编辑此图</button>
+				<button class="btn"><router-link :to="imgM.link">编辑此图</router-link></button>
 			</div>
 		</div>
 	</div>
@@ -29,16 +29,17 @@
 	.pic_img,.pic_img img{ width: 230px; height: 240px; }
 	
 	.display_box .btn{ width: 250px; height: 40px;  background: #FF4500; color: #fff; font-size: 20px;}
+	.display_box .btn a{ color: #fff; }
 </style>
 <script>
 	export default{
 		 data () {  
             return {  
                imgMessages: [
-               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图"},
-               		{ src:"../../static/chord.png", alt: "chord展示图", name:"chord图",des:"这是一个最基本的chord图"},
-               		{ src:"../../static/tree.png", alt: "tree展示图", name:"tree图",des:"这是一个最基本的tree图"},
-               		{ src:"../../static/sigma.png", alt: "sigma展示图", name:"sigma图",des:"这是一个最基本的sigma图"}
+               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图",link:"/home/bubbleconfig"},
+               		{ src:"../../static/chord.png", alt: "chord展示图", name:"chord图",des:"这是一个最基本的chord图",link:""},
+               		{ src:"../../static/tree.png", alt: "tree展示图", name:"tree图",des:"这是一个最基本的tree图",link:""},
+               		{ src:"../../static/sigma.png", alt: "sigma展示图", name:"sigma图",des:"这是一个最基本的sigma图",link:""}
                ]
             }  
         }

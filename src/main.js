@@ -4,10 +4,15 @@ import Vue from 'vue'
 import Home from './page/home.vue'
 import VueRouter from 'vue-router'
 import Detail from './page/detail' 
+import PrDisplay from './components/prDisplay'
+import BubbleConfig from './components/bubbleConfig'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: Home},
+  { path: '/home', component: Home,children:[
+      {path: '',component:PrDisplay},
+      {path: 'bubbleconfig',component:BubbleConfig}
+  ]},
   { path: '/detail', component: Detail }
 ]
 

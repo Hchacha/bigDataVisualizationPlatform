@@ -7,7 +7,7 @@
         <Modal></Modal> 
         <router-view></router-view>
        <!--  <BubbleConfig></BubbleConfig> -->
-       <PrDisplay></PrDisplay> 
+       <!-- <PrDisplay></PrDisplay>  -->
     </div>  
 </template>  
 <style>  
