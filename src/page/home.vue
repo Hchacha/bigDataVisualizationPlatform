@@ -3,18 +3,26 @@
 <template>  
     <div class="container1">  
         <HeaderDiv :logo="logoMsg"></HeaderDiv>
+        
         <Modal></Modal> 
+        <router-view></router-view>
+       <!--  <BubbleConfig></BubbleConfig> -->
+       <PrDisplay></PrDisplay> 
     </div>  
 </template>  
 <style>  
-    .container1 { height: 600px; background: url(../../static/background.jpg); }
+    .container1 { height: 600px; /* background: url(../../static/background.jpg); */ background: #f5f5f5; }
     .fl { float: left; }
     .fr { float: right;}
+    p,h1,h2,h3,h4{ margin: 0; padding: 0;}
 </style>  
 <script>  
     import $ from '../tool/jquery-vendor.js'    
     import HeaderDiv from '../components/homeHeader'
     import Modal from '../components/modal'
+    import PrDisplay from '../components/prDisplay'
+    import BubbleConfig from '../components/bubbleConfig'
+    import VueRouter from 'vue-router'
     export default {  
         data () {  
             return {  
@@ -22,7 +30,9 @@
             }  
         },components: {
             HeaderDiv,
-            Modal
+            Modal,
+            PrDisplay,
+            BubbleConfig
         }
     }  
 </script>  
