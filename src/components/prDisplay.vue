@@ -36,7 +36,7 @@
 		 data () {  
             return {  
                imgMessages: [
-               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图",link:"/home/bubbleconfig"},
+               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图",link:"/bubbleconfig"},
                		{ src:"../../static/chord.png", alt: "chord展示图", name:"chord图",des:"这是一个最基本的chord图",link:""},
                		{ src:"../../static/tree.png", alt: "tree展示图", name:"tree图",des:"这是一个最基本的tree图",link:""},
                		{ src:"../../static/sigma.png", alt: "sigma展示图", name:"sigma图",des:"这是一个最基本的sigma图",link:""}

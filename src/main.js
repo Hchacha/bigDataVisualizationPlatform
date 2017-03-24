@@ -9,7 +9,7 @@ import BubbleConfig from './components/bubbleConfig'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/home', component: Home,children:[
+  { path: '/', component: Home,children:[
       {path: '',component:PrDisplay},
       {path: 'bubbleconfig',component:BubbleConfig}
   ]},

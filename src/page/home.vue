@@ -3,7 +3,6 @@
 <template>  
     <div class="container1">  
         <HeaderDiv :logo="logoMsg"></HeaderDiv>
-        
         <Modal></Modal> 
         <router-view></router-view>
        <!--  <BubbleConfig></BubbleConfig> -->
