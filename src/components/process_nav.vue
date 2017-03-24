@@ -35,7 +35,19 @@
 </style>
 <script>
 	export default{
-
-
+		props: ['process_index'],
+		mounted: function(){
+			switch(Number(this.process_index)){
+				case 1:
+					$('.stepbar-rec:eq(1)').removeClass('stepbar-rec-active');
+					$('.stepbar-content li:eq(1)').removeClass('stepbar-content-active')
+				break;
+				case 2:
+					$('.stepbar-rec:eq(1)').addClass('stepbar-rec-active');
+					$('.stepbar-content li:eq(1)').addClass('stepbar-content-active')
+				break;
+				default: alert('dsad'); break;
+			}
+		}
 	}
 </script>

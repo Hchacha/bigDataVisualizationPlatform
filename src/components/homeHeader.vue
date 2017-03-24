@@ -24,11 +24,11 @@
 				]
 			}
 		},
-		props: ['logo']
+		props: ['logo'],
+		mounted: function(){
+			$('.nav li:eq(4)').attr({"data-toggle": "modal", "data-target":"#myModal"});
+		}
 	}
-	$(function(){
-		$('.nav li:eq(4)').attr({"data-toggle": "modal", "data-target":"#myModal"});
-	});
 	</script>
 <style>
 	.nav li{ float: left; }	
