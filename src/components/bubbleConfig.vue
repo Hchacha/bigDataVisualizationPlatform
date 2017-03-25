@@ -16,7 +16,8 @@
 	</div>	
 </template>
 <style>
-	
+	.bConfig1 a{ color: white; text-decoration: none;}
+	.bConfig1 a:hover{ text-decoration: none;}
 
 </style>
 <script>
@@ -26,7 +27,7 @@
 			process_nav
 		},data:function(){
 			return {
-				roulink: "a"
+				roulink: ""
 			}
 		},mounted: function(){
 			var vmThis = this;

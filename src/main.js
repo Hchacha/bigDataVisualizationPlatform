@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import Home from './page/home.vue'
 import VueRouter from 'vue-router'
-import Detail from './page/detail' 
+import Bubble from './page/bubble' 
 import PrDisplay from './components/prDisplay'
 import BubbleConfig from './components/bubbleConfig'
 import BubbleConfig1 from './components/bubbleConfig1'
@@ -15,7 +15,7 @@ const routes = [
       {path: 'bubbleconfig',component:BubbleConfig},
       {path: 'bubbleconfig1',component:BubbleConfig1}
   ]},
-  { path: '/detail', component: Detail }
+  { path: '/bubble', component: Bubble }
 ]
 
 const router = new VueRouter({

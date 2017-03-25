@@ -14,6 +14,7 @@
 				<label for="">设置背景颜色</label>
 				<input type="text" class="xValue">
 			</div>
+			<button class="btn btn-lg">生成图标</button>
 		</form>
 	</div>
 </template>
