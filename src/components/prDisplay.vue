@@ -17,17 +17,16 @@
 		</div>
 	</div>
 </template>
-<style>
+<style scoped>
+	.display_box p{ margin: 0;}
 	.display_box{ padding-top: 30px; }
 	.display_box .tilte{ text-align: center; color: #fd5d1e; font-size: 36px; font-weight: normal; margin-bottom: 30px;}
 	.display_box .tilte a{ color: #fd5d1e; }
-
-	.pic_box{ width: 250px; height: 340px; border: 1px solid #cfcfcf; float: left; margin: 0 20px; overflow: hidden; background: white;  }
+	.pic_box{ width: 250px; height: 360px; border: 1px solid #cfcfcf; float: left; margin: 0 20px; overflow: hidden; background: white;  }
 	.pic_box .head{ padding: 10px; }
 	.pic_box .head h4,.pic_box .head p{ height: 20px; line-height: 20px;}
 	.pic_box:hover{ border: 1px solid #e6732e}
 	.pic_img,.pic_img img{ width: 230px; height: 240px; }
-	
 	.display_box .btn{ width: 250px; height: 40px;  background: #FF4500; color: #fff; font-size: 20px;}
 	.display_box .btn a{ color: #fff; }
 </style>

@@ -6,7 +6,6 @@
 	        <ul class="nav fr">
 	            <li v-for="nav in navs"><a href="#">{{nav.li}}</a></li>
 	        </ul>
-
         </div>
     </header>
 </template>
@@ -30,11 +29,12 @@
 		}
 	}
 	</script>
-<style>
+<style scoped>
 	.nav li{ float: left; }	
 	.header{ background-color: #222; height: 54px; }
 	#logo{ height: 54px; color: #9d9d9d; line-height: 54px; font-size: 20px; }
-	.nav li a{ color: #9d9d9d; font-size: 15px; line-height: 54px; display: block; padding: 0;}
+	
+	.nav li a{ color: #9d9d9d; height:54px; font-size: 15px; line-height: 54px; display: block; padding: 0;}
 	.nav li a:hover{ background: none; color: #fff;}
 	.nav li{ padding:0 20px;}
 </style>

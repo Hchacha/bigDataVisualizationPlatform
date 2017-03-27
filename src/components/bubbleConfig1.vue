@@ -3,6 +3,10 @@
 		<process_nav process_index=2></process_nav>
 		<form >
 			<div class="form-group">
+				<label for="">请输入图表的名字</label>
+				<input type="text" class="xValue">
+			</div>
+			<div class="form-group">
 				<label for="">请输入x坐标单位</label>
 				<input type="text" class="xValue">
 			</div>
@@ -14,7 +18,7 @@
 				<label for="">设置背景颜色</label>
 				<input type="text" class="xValue">
 			</div>
-			<button class="btn btn-lg">生成图标</button>
+			<button class="btn btn-lg"><router-link to="/bubble">生成图标</router-link></button>
 		</form>
 	</div>
 </template>

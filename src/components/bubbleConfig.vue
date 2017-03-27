@@ -15,10 +15,9 @@
   		<p>如果报错此处是错误信息</p>
 	</div>	
 </template>
-<style>
+<style scoped>
 	.bConfig1 a{ color: white; text-decoration: none;}
 	.bConfig1 a:hover{ text-decoration: none;}
-
 </style>
 <script>
 	import process_nav from "./process_nav"
