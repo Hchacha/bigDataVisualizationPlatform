@@ -10,6 +10,8 @@ import BubbleConfig from './components/bubbleConfig'
 import BubbleConfig1 from './components/bubbleConfig1'
 Vue.use(VueRouter);
 
+
+
 const routes = [
   { path: '/', component: Home,children:[
       {path: '',component:PrDisplay},
@@ -23,5 +25,6 @@ const router = new VueRouter({
   routes // （缩写）相当于 routes: routes
 })
 const app = new Vue({
-  router
+  router,
+  store
 }).$mount('#app')
