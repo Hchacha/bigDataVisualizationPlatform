@@ -56,7 +56,7 @@
 					   	if(door2){
 					   		vmThis.roulink = "/bubbleConfig1";
 					   		$(".bConfig1 .btn-lg").removeAttr('disabled');
-							vmThis.$store.commit('set',jsData);	
+							vmThis.$store.commit('setJson',jsData);	
 					   	}else{
 					   		$("input[type=reset]").trigger("click");
 					   		alert("请输入正确格式的json");

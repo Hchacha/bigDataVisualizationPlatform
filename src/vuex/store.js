@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     dataJson: false
   },
   mutations: {
-    set (state,msg) {
+    setJson (state,msg) {
       state.dataJson = msg;
     }
   }

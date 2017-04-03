@@ -5,7 +5,7 @@
 	</div>
 </template>
 <style scoped>
-	#Draw {  width:　100%; height: 665px; }
+	#Draw {  width:　600px; height: 638px; }
 </style>
 <script>
 import echarts from 'echarts'
@@ -21,14 +21,13 @@ export default {
 		}
 	},
 	mounted: function(){
+		//判断如果有数据则初始化数据如果没有数据报错
 		if(this.ownJson){
 			console.log(this.ownJson);	
 			this.init(this.ownJson);
 		}else{
 			alert("不可以直接访问该目录");	
 		}
-		console.log(this.ownJson); // -> 1
-		//console.log(this.ownJson);
 	},
 	methods: {
 		init: function(config){
@@ -61,20 +60,20 @@ export default {
 					type: 'slider',
 					show: true,
 					xAxisIndex: [0],
-					start: 1,
-					end: 35
+					start: 0,
+					end: 100 
 				}, {
 					type: 'slider',
 					show: true,
 					yAxisIndex: [0],
 					left: '93%',
-					start: 29,
-					end: 36
+					start: 0,
+					end: 100
 				}, {
 					type: 'inside',
 					xAxisIndex: [0],
 					start: 1,
-					end: 35
+					end: 100
 				}, {
 					type: 'inside',
 					yAxisIndex: [0],
@@ -93,13 +92,12 @@ export default {
 					feature: {
 						dataZoom: {}, //开启数据视图缩放功能
 						dataView: {}, //开启数据视图工具
-						magicType: {type: ['line', 'bar','scatter']},                 //图的转换工具
 						restore: {}, //开启还原工具
 						saveAsImage: {} //开起保存为图片工具
 					}
 				},
 				series: [{
-					name: "销量",
+					name: "数据对象一的名字",
 					type: config.type,
 					data: data,
 					symbolSize: function(data) {

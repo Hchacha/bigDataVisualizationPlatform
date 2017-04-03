@@ -5,12 +5,10 @@
         <HeaderDiv :logo="logoMsg"></HeaderDiv>
         <Modal></Modal> 
         <router-view></router-view>
-       <!--  <BubbleConfig></BubbleConfig> -->
-       <!-- <PrDisplay></PrDisplay>  -->
     </div>  
 </template>  
 <style>  
-    .container1 { height: 600px; /* background: url(../../static/background.jpg); */ background: #f5f5f5; }
+    .container1 {  /* background: url(../../static/background.jpg); */ background: #f5f5f5; }
     .fl { float: left; }
     .fr { float: right;}
     p,h1,h2,h3,h4{ margin: 0; padding: 0;}

@@ -10,13 +10,12 @@ import BubbleConfig from './components/bubbleConfig'
 import BubbleConfig1 from './components/bubbleConfig1'
 Vue.use(VueRouter);
 
-
-
 const routes = [
   { path: '/', component: Home,children:[
       {path: '',component:PrDisplay},
       {path: 'bubbleconfig',component:BubbleConfig},
       {path: 'bubbleconfig1',component:BubbleConfig1}
+   
   ]},
   { path: '/bubble', component: Bubble }
 ]

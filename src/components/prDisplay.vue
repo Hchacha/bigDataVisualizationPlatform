@@ -1,9 +1,7 @@
 <template>
 	<div class="display_box container">
 		<h4 class="tilte">
-			<span></span>
 			<a href="#">可选图形</a>
-			<span></span>
 		</h4>
 		<div class="row">
 			<div class="pic_box" v-for="imgM in imgMessages">
@@ -19,8 +17,8 @@
 </template>
 <style scoped>
 	.display_box p{ margin: 0;}
-	.display_box{ padding-top: 30px; }
-	.display_box .tilte{ text-align: center; color: #fd5d1e; font-size: 36px; font-weight: normal; margin-bottom: 30px;}
+	.display_box{ padding: 30px 0 114px 0; }
+	.display_box .tilte{ height: 40px; line-height: 40px;text-align: center; color: #fd5d1e; font-size: 36px; font-weight: normal; margin-bottom: 30px;}
 	.display_box .tilte a{ color: #fd5d1e; }
 	.pic_box{ width: 250px; height: 360px; border: 1px solid #cfcfcf; float: left; margin: 0 20px; overflow: hidden; background: white;  }
 	.pic_box .head{ padding: 10px; }
