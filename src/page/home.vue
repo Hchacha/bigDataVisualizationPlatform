@@ -4,10 +4,13 @@
     <div class="container1">  
         <HeaderDiv :logo="logoMsg"></HeaderDiv>
         <Modal></Modal> 
-        <router-view></router-view>
+        <div class="body_box">
+        	<router-view></router-view>
+        </div>
     </div>  
 </template>  
 <style>  
+	.body_box{ padding-top: 56px;}
     .container1 {  /* background: url(../../static/background.jpg); */ background: #f5f5f5; }
     .fl { float: left; }
     .fr { float: right;}

@@ -1,11 +1,11 @@
 
 <template>
 	<div class="contianer">
-			<div id="Draw"></div>
+			<div id="Draw" ></div>
 	</div>
 </template>
 <style scoped>
-	#Draw {  width: 600px; height: 400px; }
+	#Draw {  width: 800px; height: 564px;  margin-left: 400px; margin-top: 20px; }
 </style>
 <script>
 import echarts from 'echarts'
@@ -29,11 +29,20 @@ export default {
 			alert("不可以直接访问该目录");	
 		}
 	},
+	watch:{
+		ownJson:{
+			handler(curVal,oldVal){
+				this.init(curVal);
+			},
+			deep:true
+		}
+	},
 	methods: {
 		init: function(config){
 			var myChart = echarts.init(document.getElementById('Draw'));
 			var data = config.data;
 			var title = config.title;
+			var symbol = config.symbol;
 			var option = {
 				backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
 					offset: 0,
@@ -100,6 +109,7 @@ export default {
 					name: "数据对象一的名字",
 					type: config.type,
 					data: data,
+					symbol: symbol,
 					symbolSize: function(data) {
 						return data[2];
 					},

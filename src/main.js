@@ -8,14 +8,15 @@ import Bubble from './page/bubble'
 import PrDisplay from './components/prDisplay'
 import BubbleConfig from './components/bubbleConfig'
 import BubbleConfig1 from './components/bubbleConfig1'
+import BodyChart from './components/bodyChart/index'
 Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: Home,children:[
       {path: '',component:PrDisplay},
       {path: 'bubbleconfig',component:BubbleConfig},
-      {path: 'bubbleconfig1',component:BubbleConfig1}
-   
+      {path: 'bubbleconfig1',component:BubbleConfig1},
+      {path: 'disChart', component:BodyChart }
   ]},
   { path: '/bubble', component: Bubble }
 ]
@@ -23,7 +24,7 @@ const routes = [
 const router = new VueRouter({
   routes // （缩写）相当于 routes: routes
 })
-const app = new Vue({
+const vm = new Vue({
   router,
   store
 }).$mount('#app')

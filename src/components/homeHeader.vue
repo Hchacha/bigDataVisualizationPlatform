@@ -30,6 +30,7 @@
 	}
 	</script>
 <style scoped>
+	header{ position: fixed; width: 100%; z-index: 2;}
 	.nav li{ float: left; }	
 	.header{ background-color: #222; height: 54px; }
 	#logo{ height: 54px; color: #9d9d9d; line-height: 54px; font-size: 20px; }
