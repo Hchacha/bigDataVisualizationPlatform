@@ -5,7 +5,7 @@
 	</div>
 </template>
 <style scoped>
-	#Draw {  width:　600px; height: 638px; }
+	#Draw { width:　600px; height: 638px; }
 </style>
 <script>
 import echarts from 'echarts'

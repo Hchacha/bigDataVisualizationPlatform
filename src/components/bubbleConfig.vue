@@ -10,14 +10,15 @@
 				<input type="reset" name="reset" style="display: none;" />
 				<p class="help-block">可支持的格式.json</p>
 	  		</div>
-	 		<button type="button" class="btn btn-lg btn-primary" disabled="disabled"><router-link :to="roulink" >下一步</router-link></button>
+	 		<router-link :to="roulink" ><button type="button" class="btn btn-lg btn-primary" disabled="disabled">下一步</button></router-link>
   		</form>
-  		<p>如果报错此处是错误信息</p>
+  		<p>目前只能用json数据，json里面必须有一个data字段，data为一个数组，数组元素还是一个数组数据如实例：{"data":[[1,22],[2,23],[3,33]]}</p>
 	</div>	
 </template>
 <style scoped>
 	.bConfig1 a{ color: white; text-decoration: none;}
 	.bConfig1 a:hover{ text-decoration: none;}
+	.bConfig1 p{ color: red; }
 </style>
 <script>
 	import process_nav from "./process_nav"

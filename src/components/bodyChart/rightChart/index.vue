@@ -23,7 +23,6 @@ export default {
 	mounted: function(){
 		//判断如果有数据则初始化数据如果没有数据报错
 		if(this.ownJson){
-			console.log(this.ownJson);	
 			this.init(this.ownJson);
 		}else{
 			alert("不可以直接访问该目录");	
@@ -43,6 +42,15 @@ export default {
 			var data = config.data;
 			var title = config.title;
 			var symbol = config.symbol;
+			console.log(config.nodeSize);
+			if(config.nodeSize==0){
+				var nodeSize = 20;
+			}else{
+				var nodeSize = function(data){
+					return data[config.nodeSize-1]
+				}
+			}
+			console.log(nodeSize);
 			var option = {
 				backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
 					offset: 0,
@@ -110,9 +118,7 @@ export default {
 					type: config.type,
 					data: data,
 					symbol: symbol,
-					symbolSize: function(data) {
-						return data[2];
-					},
+					symbolSize: nodeSize,
 					itemStyle: {
 						normal: {
 							shadowBlur: 10,

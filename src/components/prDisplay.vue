@@ -10,7 +10,7 @@
 					<h4 class="pic_title">{{imgM.name}}</h4>
 					<p>{{imgM.des}}</p>
 				</div>
-				<button class="btn"><router-link :to="imgM.link">编辑此图</router-link></button>
+				<router-link :to="imgM.link"><button class="btn">编辑此图</button></router-link>
 			</div>
 		</div>
 	</div>
@@ -24,6 +24,7 @@
 	.pic_box .head{ padding: 10px; }
 	.pic_box .head h4,.pic_box .head p{ height: 20px; line-height: 20px;}
 	.pic_box:hover{ border: 1px solid #e6732e}
+	.pic_box h4{ margin-top: 10px; margin-bottom: 10px; }
 	.pic_img,.pic_img img{ width: 230px; height: 240px; }
 	.display_box .btn{ width: 250px; height: 40px;  background: #FF4500; color: #fff; font-size: 20px;}
 	.display_box .btn a{ color: #fff; }
@@ -39,7 +40,10 @@
                		{ src:"../../static/sigma.png", alt: "sigma展示图", name:"sigma图",des:"这是一个最基本的sigma图",link:""}
                ]
             }  
-        }
+       },
+       mounted:function(){
+       		alert("目前只完成了气泡图也就是第一个其他的暂时是空连接");
+       }
 	}
 
 </script>

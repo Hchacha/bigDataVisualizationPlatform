@@ -22,7 +22,7 @@
 		</div>
 	</div>
 </template>
-<style>
+<style scoped>
 	.stepbar-head{width: 750px; height: 9px; margin: 0 auto; margin-top: 58px;}
 	.stepbar-rec{ width: 140px; height: 9px; margin: 0 -25px 0 140px; float: left; border-radius: 25px 25px 25px 25px; background: #d7d7d7; }
 	.stepbar-rec-active { background: #0896DF; }
