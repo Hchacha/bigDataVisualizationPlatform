@@ -10,7 +10,7 @@
 					<h4 class="pic_title">{{imgM.name}}</h4>
 					<p>{{imgM.des}}</p>
 				</div>
-				<router-link :to="imgM.link"><button class="btn">编辑此图</button></router-link>
+				<router-link :to="imgM.link" ><button class="btn" @click="midifType(imgM.type)" >编辑此图</button></router-link>
 			</div>
 		</div>
 	</div>
@@ -34,15 +34,20 @@
 		 data () {  
             return {  
                imgMessages: [
-               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图",link:"/bubbleconfig"},
-               		{ src:"../../static/chord.png", alt: "chord展示图", name:"chord图",des:"这是一个最基本的chord图",link:""},
+               		{ src:"../../static/bubble.png", alt: "气泡展示图", name:"气泡图",des:"这是一个最基本的Bubble图",link:"/bubbleconfig",type: "scatter"},
+               		{ src:"../../static/barShow.png", alt: "chord展示图", name:"堆叠条形图",des:"这是一个最基本的chord图",link:"bubbleconfig", type: "bar"},
                		{ src:"../../static/tree.png", alt: "tree展示图", name:"tree图",des:"这是一个最基本的tree图",link:""},
                		{ src:"../../static/sigma.png", alt: "sigma展示图", name:"sigma图",des:"这是一个最基本的sigma图",link:""}
                ]
             }  
-       },
+      },
+      methods:{
+      	midifType(type){
+      		this.$store.state.pictureType = type;
+      	}
+      },
        mounted:function(){
-       		alert("目前只完成了气泡图也就是第一个其他的暂时是空连接");
+       		console.log(this.$store.state.pictureType);
        }
 	}
 

@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    dataJson: false
+    dataJson: false,
+    pictureType: 'scatter'
   },
   mutations: {
     setJson (state,msg) {

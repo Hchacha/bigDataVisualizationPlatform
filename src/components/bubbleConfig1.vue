@@ -54,20 +54,31 @@ export default{
 			jia: "dsda",
 			ownJson: this.$store.state.dataJson,
 			selected: 0,
-			selected1: 0
+			selected1: 0,
+			typeP: 'dasd'
 		}
 	},
 	components:{
 		process_nav
-	},methods:{
+	},
+	created(){
+		this.fetchData();
+	},
+	methods:{
 		updata: function(){
 			this.$store.commit('setJson',this.ownJson);	
 		},
+		//选择哪组数据为大小的展示
 		upSelect: function(){
 			this.ownJson.nodeSize=this.selected;
 		},
+		//选择哪组数据为颜色的展示
 		upSelect1: function(){
 			this.ownJson.nodeColor=this.selected1;
+		},
+		//获取store中的数据
+		fetchData(){
+			this.typeP = this.$store.state.pictureType;
 		}
 	},
 	computed: {
@@ -79,19 +90,17 @@ export default{
 			return arr;
 		}
 	},
-	mounted:function(){
+	mounted(){
 		//判断数据对象的维度
 		this.ownJson.nodeSize = 0;
 		this.ownJson.nodeColor = 0;
 		//判断是否添加一些字段如果没有则添加默认值
-		if(!this.ownJson.symbol){
+		if(this.type="scatter"&&!this.ownJson.symbol){
 	        this.ownJson.symbol="circle";
 			this.$store.commit('setJson',this.ownJson);
 		}
-		if(!this.ownJson.type){
-	        this.ownJson.type="scatter";
-			this.$store.commit('setJson',this.ownJson);
-		}
+	    this.ownJson.type=this.typeP;
+		this.$store.commit('setJson',this.ownJson);
 	}
 }
 </script>

@@ -14,7 +14,7 @@
 				<label for="item2Title">y轴单位：</label>
 				<input type="text" id="item2Title" class="form-control" v-model="ownJson.item2_title"/>
 			</div>
-			<div class="form-group">
+			<div class="form-group" v-if="bubbleType">
 				<label for="item2Title">气泡形状：</label>
 				<select class="form-control" v-model="selected" @change="updataSel">
 				    <option value="circle">circle</option>
@@ -26,7 +26,7 @@
 				    <option value="arrow">arrow</option>
 				</select>
 			</div>
-			<button class="btn btn-default">下载该动态表</button>
+			<button class="btn btn-default downloadBtn">下载该动态表</button>
 		</form>
 	</div> 
 </template>
@@ -34,13 +34,19 @@
 	.sidebar{ position: fixed; width:250px; top: 54px; bottom: 0; left: 0; z-index: 2; background: #FFF;  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);}
 	.sidebar{ padding: 20px; }
 	.form-group{ margin-top: 10px;}
+	.downloadBtn{ margin-top: 10px;}
 </style>
 <script>
 	export default{
 		data:function(){
 			return {
-				selected: ""
+				selected: "",
+				typeP: '',
+				bubbleType: false
 			}
+		},
+		created(){
+			this.fetchData();	
 		},
 		computed: {
 			ownJson(){
@@ -54,6 +60,19 @@
 			},
 			updata: function(){
 				this.$store.commit('setJson',this.ownJson);	
+			},
+			fetchData() {
+				this.typeP = this.$store.state.pictureType;
+				console.log(this.typeP);
+				switch(this.typeP){
+					case 'scatter':
+						this.bubbleType = true;
+						break;
+					case 'bar':
+						this.bubbleType = false;
+						break;
+				}
+				console.log(this.bubbleType);
 			}
 		},
 		mounted: function(){

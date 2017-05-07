@@ -17,11 +17,12 @@ export default {
 	},
 	computed: {
 		ownJson(){
-			return this.$store.state.dataJson
+			return this.$store.state.testda
 		}
 	},
 	mounted: function(){
 		//判断如果有数据则初始化数据如果没有数据报错
+		console.log(this.ownJson);
 		if(this.ownJson){
 			console.log(this.ownJson);	
 			this.init(this.ownJson);
