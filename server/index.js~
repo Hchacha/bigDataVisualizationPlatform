@@ -8,7 +8,6 @@ const session=require('express-session');
 app.use(express.static('../dist'));
 
 app.use(session({
-	//一个字符串，作为服务器生成session的签名
 	secret: 'an',
 	resave: false,
 	saveUninitialized: true
@@ -27,12 +26,6 @@ app.use(session({
 //                    alert(data.message);
 //});
 app.post('/', urlencodedParser,function(req,res){
-	var user={
-		name:"Chen-xy",
-		age:"22",
-       		address:"bj"
- 	}
-	req.session.user=user;
     	console.log(req.body);
 	var ajaxTest={
     		'tips':'you are not alone'

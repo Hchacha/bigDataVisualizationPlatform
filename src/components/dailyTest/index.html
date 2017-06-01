@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="trumbowyg.css">
+	<style>
+	 html, body {
+
+                margin: 0;
+
+                padding: 0;
+
+                background-color: #F2F2F2;
+
+                font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+
+            }
+	#trumbowyg-demo{ w }	
+	#main { max-width: 960px; margin: 0 auto;   }
+	</style>
+</head>
+<body>
+	<div id="main">
+            <form action="#">
+	<div id="trumbowyg-demo"></div>
+	</form>
+	</div>
+
+
+	<script src="jquery.min.js"></script>
+	<script src="trumbowyg.min.js"></script>
+	<script>
+			$('#trumbowyg-demo').trumbowyg({
+				lang: 'zh_cn'
+			});
+			$.trumbowyg.btnsGrps.test = ['bold', 'link'];
+	</script>
+</body>
+</html>

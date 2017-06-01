@@ -8,6 +8,7 @@ import PrDisplay from './components/prDisplay'
 import BubbleConfig from './components/bubbleConfig'
 import BubbleConfig1 from './components/bubbleConfig1'
 import BodyChart from './components/bodyChart/index'
+import Login from './page/login.vue'
 Vue.use(VueRouter);
 //路由的配置
 const routes = [
@@ -16,7 +17,11 @@ const routes = [
       {path: 'bubbleconfig',component:BubbleConfig},
       {path: 'bubbleconfig1',component:BubbleConfig1},
       {path: 'disChart', component:BodyChart }
-  ]}
+  ]},
+  { 
+  		path: '/login',
+  		component: Login
+  }
 ]
 
 const router = new VueRouter({

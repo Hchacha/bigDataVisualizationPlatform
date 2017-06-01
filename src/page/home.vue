@@ -1,5 +1,4 @@
 <!-- Home.vue -->  
-
 <template>  
     <div class="container1">  
         <HeaderDiv :logo="logoMsg"></HeaderDiv>
@@ -9,6 +8,43 @@
         </div>
     </div>  
 </template>  
+<script>  
+    import $ from '../tool/jquery-vendor.js'    
+    import HeaderDiv from '../components/homeHeader'
+    import Modal from '../components/modal'
+    import PrDisplay from '../components/prDisplay'
+    import BubbleConfig from '../components/bubbleConfig'
+    export default {  
+        mounted(){
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: "http://localhost:80/",
+                dataType: "json",
+                data: {
+                    NAME: 'sawyer',
+                    NUM: 11
+                },
+                success: function(data){
+                    console.log(data);
+                },
+                error: function(data){
+                      alert("失败了");
+                }
+            });
+        },
+        data () {  
+            return {  
+               logoMsg:'大数据可视化平台' 
+            }  
+        },components: {
+            HeaderDiv,
+            Modal,
+            PrDisplay,
+            BubbleConfig
+        }
+    }  
+</script>  
 <style src="bootstrap"></style>
 <style>  
 	/* reset */
@@ -42,23 +78,3 @@
     .container1 {  background: #f5f5f5; }
     /* end private */ 
 </style>  
-<script>  
-    import $ from '../tool/jquery-vendor.js'    
-    import HeaderDiv from '../components/homeHeader'
-    import Modal from '../components/modal'
-    import PrDisplay from '../components/prDisplay'
-    import BubbleConfig from '../components/bubbleConfig'
-    import VueRouter from 'vue-router'
-    export default {  
-        data () {  
-            return {  
-               logoMsg:'大数据可视化平台' 
-            }  
-        },components: {
-            HeaderDiv,
-            Modal,
-            PrDisplay,
-            BubbleConfig
-        }
-    }  
-</script>  
